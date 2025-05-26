@@ -36,7 +36,7 @@ Welcome to the **Task Manager App** – a full-stack project built with **Expres
    cd task-manager-app/backend
    ```
 
-2. Create a `.env` file in the backend directory and configure the following environment variables:
+2. Rename `.env.example` to `.env` and configure the following environment variables:
    ```dotenv
    MONGO_URI=<your-mongodb-uri>
    JWT_SECRET=<your-jwt-secret>
