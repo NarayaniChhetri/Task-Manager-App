@@ -20,7 +20,37 @@ Welcome to the **Task Manager App** – a full-stack project built with **Expres
 
 ## ⚙️ Getting Started
 
+### 🔧 Clone the Repository
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kshanxs/Task-Manager-App.git
+   ```
+
+---
+
 ### 🔧 Backend Setup (Express.js)
+
+1. Navigate to the backend folder:
+   ```bash
+   cd task-manager-app/backend
+   ```
+
+2. Rename `.env.example` to `.env` and configure the following environment variables:
+   ```dotenv
+   MONGO_URI=<your-mongodb-uri>
+   JWT_SECRET=<your-jwt-secret>
+   ADMIN_INVITE_TOKEN=020305
+   PORT=8000
+   ```
+
+   - **ADMIN_INVITE_TOKEN**: This token (`020305`) is used to invite new admin users. You can change this token to any value you prefer by updating the `ADMIN_INVITE_TOKEN` in the `.env` file.
+
+3. Install dependencies and start the backend server:
+   ```bash
+   npm install
+   npm start
+   ```
 
 For detailed backend setup instructions, refer to the [Backend README](./backend/README.md).
 
