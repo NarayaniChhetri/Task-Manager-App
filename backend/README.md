@@ -43,6 +43,11 @@ This is the backend for the **Task Manager App**, built with **Express.js** and 
    - **Rename** `.env.example` to `.env`
    - Paste your connection string into the `.env` file.
    - Replace `<password>` with your database user password.
+   - Add the following environment variables:
+     ```dotenv
+     ADMIN_INVITE_TOKEN=020305
+     ```
+     - **ADMIN_INVITE_TOKEN**: This token (`020305`) is used to invite new admin users. You can change this token to any value you prefer by updating the `ADMIN_INVITE_TOKEN` in the `.env` file.
 
 5. **Generate a JWT Secret**
    ```bash
