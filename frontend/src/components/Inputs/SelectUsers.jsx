@@ -46,8 +46,6 @@ const SelectUsers = ({ selectedUsers, setSelectedUsers }) => {
     if (selectedUsers.length === 0) {
       setTempSelectedUsers([]);
     }
-
-    return () => {};
   }, [selectedUsers]);
 
   return (
@@ -70,21 +68,23 @@ const SelectUsers = ({ selectedUsers, setSelectedUsers }) => {
         title="Select Users"
       >
         <div className="space-y-4 h-[60vh] overflow-y-auto">
-            {allUsers.map((user) => (
+          {allUsers.map((user) => (
             <div
               key={user._id}
               className="flex items-center gap-4 p-3 border-b border-gray-200"
             >
               <img
-                src={user.profileImageUrl}
-                alt={user.name}
+                src={user.profileImageUrl || "/default-avatar.png"} // Fallback for missing profile image
+                alt={user.name || "User"}
                 className="w-10 h-10 rounded-full"
               />
               <div className="flex-1">
-                <p className="font-medium text-gray-800 dark:text-white">
-                  {user.name}
+                <p className="font-medium text-gray-800">
+                  {user.name || "No Name Available"}
                 </p>
-                <p className="text-[13px] text-gray-500">{user.email}</p>
+                <p className="text-[13px] text-gray-500">
+                  {user.email || "No Email Available"}
+                </p>
               </div>
 
               <input
@@ -97,7 +97,7 @@ const SelectUsers = ({ selectedUsers, setSelectedUsers }) => {
           ))}
         </div>
 
-         <div className="flex justify-end gap-4 pt-4">
+        <div className="flex justify-end gap-4 pt-4">
           <button className="card-btn" onClick={() => setIsModalOpen(false)}>
             CANCEL
           </button>
