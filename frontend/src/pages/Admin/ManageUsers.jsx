@@ -143,11 +143,15 @@ const ManageUsers = () => {
         </Modal>
 
         {/* Delete Modal */}
-        <Modal isOpen={deleteModalOpen} onClose={() => setDeleteModalOpen(false)} title="Delete User">
+        <Modal
+          isOpen={deleteModalOpen}
+          onClose={() => setDeleteModalOpen(false)}
+          title="Delete User"
+        >
           <DeleteAlert
             content="Are you sure you want to delete this user? Deleting this user may also delete tasks assigned to them if no other user is working on those tasks."
             onDelete={confirmDelete}
-            loading={loading}
+            onCancel={() => setDeleteModalOpen(false)} // Pass the onCancel function
           />
         </Modal>
       </div>
