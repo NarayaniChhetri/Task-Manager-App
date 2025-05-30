@@ -53,7 +53,7 @@ Welcome to the **Task Manager App** – a full-stack project built with **Expres
    ```
 
    ```bash
-   npm start
+   npm run dev
    ```
 
 For detailed backend setup instructions, refer to the [Backend README](./backend/README.md).
