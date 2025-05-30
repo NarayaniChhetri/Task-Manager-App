@@ -47,8 +47,12 @@ Welcome to the **Task Manager App** – a full-stack project built with **Expres
    - **ADMIN_INVITE_TOKEN**: This token (`020305`) is used to invite new admin users. You can change this token to any value you prefer by updating the `ADMIN_INVITE_TOKEN` in the `.env` file.
 
 3. Install dependencies and start the backend server:
+
    ```bash
    npm install
+   ```
+
+   ```bash
    npm start
    ```
 
@@ -85,11 +89,12 @@ You can run both the backend and frontend simultaneously using the following com
 
 ## 🗑️ Resetting the Backend
 
-To **completely reset the backend** (delete all users, tasks, and uploaded profile pictures except the default):
+To **completely reset the backend** (delete all users, tasks, and uploaded profile pictures except the default), you can use one of the following commands:
 
-```bash
-npm run reset --prefix backend
-```
+1. Run the reset script directly:
+   ```bash
+   npm run reset-backend
+   ```
 
 ---
 
